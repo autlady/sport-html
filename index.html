@@ -1,1023 +1,1362 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<link rel="stylesheet" href="./libs/slick/slick.css"/>
-		<link rel="stylesheet" href="./libs/slick/slick-theme.css"/>
-		<link rel="stylesheet" href="./libs/fancybox/fancybox.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-		<link rel="stylesheet" href="css/main.min.css"/>
-		<title>Page</title>
-	</head>
-	<body>
-		<!-- HEADER-->
-		<header class="header">
-			<div class="container">
-				<div class="header__inner">
-					<!-- LOGO--><a class="header__logo" href="#!"><img src="./img/logo.svg" width="328" height="53" alt="manzana group"/></a>
-					<div class="menu">
-						<!-- NAV-->
-						<nav class="nav">
-							<ul class="nav__list">
-								<li><a href="#services">Направления</a></li>
-								<li><a href="#!">Экспертиза</a></li>
-								<li><a href="#portfolio">Портфолио</a></li>
-							</ul>
-						</nav>
-						<!-- CONTACTS-->
-						<ul class="header__contacts">
-							<li><span>Телефон:</span><a class="header__contacts-tel" href="tel:+78007750111">8 (800) 775 0111</a></li>
-							<li><span>Почта:</span><a class="header__contacts-mail" href="mailto:welcome@manzanagroup.ru">welcome@manzanagroup.ru</a></li>
-						</ul>
-						<div class="header__btn">
-							<button class="btn" data-modal-button="modal-call-form">Написать нам</button>
-						</div>
-					</div>
-					<!-- BURGER-->
-					<button class="menu-toggle"><span></span></button>
-				</div>
-			</div>
-			<!-- OVERLAY-->
-			<div class="overlay"></div>
-		</header>
-		<!-- MODAL-->
-		<div class="fade-block hidden" data-modal="modal-call-form" id="modal-call-form">
-			<div class="modal-window">
-				<!-- call-form-block-->
-				<div class="call-form-block">
-					<button class="btn-close-modal" data-modal-close="data-modal-close">
-						<svg class="svg-close">
-							<use href="./img/spriteSvg.svg#svg-close"></use>
-						</svg>
-					</button>
-					<form class="form call-form">
-						<input type="hidden" name="form_name" value="Начнем сотрудничество"/>
-						<div class="form-title">Начнем <br> сотрудничество?</div>
-						<div class="call-form-subtitle">Заполните форму ниже, мы свяжемся с вами и обсудим все детали</div>
-						<div class="form-item form-item-mb15">
-							<input class="form-input" type="text" name="name" placeholder="Имя"/>
-						</div>
-						<div class="form-item form-item-mb15">
-							<input class="form-input" type="text" name="mail" placeholder="Email"/>
-						</div>
-						<div class="form-item form-item-mb15">
-							<textarea class="form-input form-input--textarea" name="message" placeholder="Расскажите о вашей задаче"></textarea>
-						</div>
-						<div class="form-item form-item-mb25">
-							<label class="checkbox">
-								<input class="real-checkbox" type="checkbox" name="privacy" checked="checked"/><span class="custom-checkbox"></span><a class="call-form-privacy" href="#!">Согласен(-на) с политикой обработки данных</a>
-							</label>
-						</div>
-						<div class="form-item form-item-btn">
-							<button class="submit-btn" type="submit">Отправить запрос</button>
-						</div>
-					</form>
-					<div class="call-form-block__img"><img src="./img/advantages/star.webp" srcset="./img/advantages/star@2x.webp 2x" width="529" height="540" alt="star"/></div>
-				</div>
-			</div>
-		</div>
-		<!-- MODAL-->
-		<div class="fade-block hidden" data-modal="modal-response" id="modal-response">
-			<div class="modal-window">
-				<!-- response-->
-				<div class="response">
-					<button class="btn-close-modal" data-modal-close="data-modal-close">
-						<svg class="svg-close">
-							<use href="./img/spriteSvg.svg#svg-close"></use>
-						</svg>
-					</button>
-					<div class="response__img"><img src="./img/response-img.webp" alt="logo" width="145" height="252"/></div>
-					<div class="response__title">Ваш запрос отправлен!</div>
-					<div class="response__text">Спасибо за интерес к Manzana Sport. <br> Мы свяжемся с Вами в течение 24 часов.</div>
-				</div>
-			</div>
-		</div>
-		<main>
-			<!-- HERO-->
-			<section class="hero">
-				<div class="container">
-					<div class="hero-content">
-						<!-- HERO TITLE-->
-						<div class="hero__title">
-							<h1 class="headline wow animate__fadeInLeft" data-wow-delay=".5s">
-								Помогаем спорту<br/><span>стать лучше</span></h1>
-						</div>
-						<h2 class="hero__text wow animate__fadeInLeft" data-wow-delay="1s">Cистема управления спортивными клубами, сооружениями и взаимоотношениями с болельщиками</h2>
-						<!-- DISCUSS BTN-->
-						<div class="hero__discuss">
-							<button class="btn-discuss" data-modal-button="modal-call-form"><span class="button-overlay"></span><img class="btn-discuss__text" src="./img/hero/discuss-text.svg" alt="discuss project" width="142" height="143"/><img class="btn-discuss__arrow" src="./img/hero/discuss-arrow.webp" srcset="./img/hero/discuss-arrow@2x.webp 2x" alt="discuss btn" width="72" height="73"/></button>
-						</div>
-						<div class="hero__images">
-							<div class="hero__decor"><img src="./img/hero/ellipse.svg" alt="decor" width="1070" height="1070"/></div>
-							<div class="hero__gates"><img src="./img/hero/gates.webp" srcset="./img/hero/gates@2x.webp 2x" alt="gates" width="730" height="730"/></div>
-							<div class="hero__ball"><img src="./img/hero/green-ball.webp" srcset="./img/hero/green-ball@2x.webp 2x" alt="ball" width="450" height="450"/></div><img class="hero__puck" src="./img/hero/puck.webp" srcset="./img/hero/puck@2x.webp 2x" alt="puck"/>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- PARTNERS-->
-			<section class="partners">
-				<div class="container">
-					<div class="partners-wrapper">
-						<!-- PARTNERS TITLE-->
-						<div class="partners__title-wrapper">
-							<h2 class="partners__title">Нам доверяют</h2>
-						</div>
-						<!-- PARTNERS SLIDER-->
-						<div class="partners-slider">
-							<div class="partner-slide"><img src="./img/partners/partner01.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner02.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner03.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner04.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner05.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner06.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner07.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner08.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner09.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner10.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner11.svg" alt="logo img"/></div>
-							<div class="partner-slide"><img src="./img/partners/partner12.svg" alt="logo img"/></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- SERVICES-->
-			<section class="services" id="services">
-				<div class="container">
-					<!-- SERVICES CARDS-->
-					<div class="services-cards">
-						<!-- service-card--><a class="service-card" href="#!">
-							<div class="fake-border"></div>
-							<div class="service-card__row">
-								<div class="service-card__img">
-									<svg class="svg-cdp">
-										<use href="./img/spriteSvg.svg#svg-cdp"></use>
-									</svg>
-								</div>
-								<h3 class="service-card__title">CDP-решения и программы лояльности</h3>
-							</div>
-							<div class="service-card__footer">
-								<div class="service-card__link">Подробнее</div>
-							</div></a>
-						<!-- service-card--><a class="service-card" href="#!">
-							<div class="fake-border"></div>
-							<div class="service-card__row">
-								<div class="service-card__img">
-									<svg class="svg-web">
-										<use href="./img/spriteSvg.svg#svg-web"></use>
-									</svg>
-								</div>
-								<h3 class="service-card__title">Мобильная и веб-разработка</h3>
-							</div>
-							<div class="service-card__footer">
-								<div class="service-card__link">Подробнее</div>
-							</div></a>
-						<!-- service-card--><a class="service-card" href="#!">
-							<div class="fake-border"></div>
-							<div class="service-card__row">
-								<div class="service-card__img">
-									<svg class="svg-marketing">
-										<use href="./img/spriteSvg.svg#svg-marketing"></use>
-									</svg>
-								</div>
-								<h3 class="service-card__title">Маркетинговая поддержка</h3>
-							</div>
-							<div class="service-card__footer">
-								<div class="service-card__link">Подробнее</div>
-							</div></a>
-					</div>
-				</div>
-			</section>
-			<!-- ABOUT-->
-			<section class="about">
-				<div class="container">
-					<div class="about-content">
-						<!-- ABOUT TITLE-->
-						<h2 class="about__title">Кто мы</h2>
-						<!-- ABOUT CARDS-->
-						<div class="about-wrapper">
-							<!-- about-card-->
-							<div class="about-card"><img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32"/>
-								<p class="about-card__text"><span>Полностью российская сертифицированная компания,</span> предоставляющая продукт c гибкой технической архитектурой решения: on-premise и SaaS</p>
-							</div>
-							<!-- about-card-->
-							<div class="about-card"><img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32"/>
-								<p class="about-card__text"><span>20 лет на рынке</span> бизнес-консалтинга и более 300 внедрённых систем управления программами лояльности в спорте, сфере развлечений и рознице</p>
-							</div>
-							<!-- about-card-->
-							<div class="about-card"><img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32"/>
-								<p class="about-card__text">Более <span>250 штатных экспертов</span> с многолетним опытом работы в продуктовом IT, бренд-менеджменте, digital маркетинге, event-менеджменте, маркетинговых и PR-коммуникациях</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- ADVANTAGES-->
-			<section class="advantages">
-				<div class="container">
-					<div class="advantages-content">
-						<!-- ADVANTAGES TITLE-->
-						<div class="advantages__title">
-							<h2 class="section-title">В чем наша сила</h2>
-						</div>
-						<!-- ADVANTAGES CARDS-->
-						<div class="advantages-cards">
-							<!--advantage-card-->
-							<div class="advantage-card advantage-card1">
-								<div class="advantage-card__wrapper">
-									<div class="advantage-card__num">1</div>
-									<div class="advantage-card__text"><span>Нам доверяют лучшие:</span> <br> ТОП-клубы РПЛ, обладающие более 80% клиентских данных в российском спорте, уже используют решение Manzana для работы со своими болельщиками</div>
-								</div>
-								<div class="advantage-card__img"><img src="./img/advantages/star.webp" srcset="./img/advantages/star@2x.webp 2x" width="529" height="540" alt="star"/></div>
-							</div>
-							<!--advantage-card-->
-							<div class="advantage-card advantage-card2">
-								<div class="advantage-card__wrapper">
-									<div class="advantage-card__num">2</div>
-									<div class="advantage-card__text"><span>Мы непрерывно инвестируем в развитие продукта</span>  и предлагаем адаптивные CDP-решения, интегрированные с основными билетными системами, СКУД, eComm-платформами, провайдерами коммуникаций и другими игроками Sport tech рынка России</div>
-								</div>
-								<div class="advantage-card__img"><img src="./img/advantages/donuts.webp" srcset="./img/advantages/donuts@2x.webp 2x" alt="donuts" width="541" height="553"/></div>
-							</div>
-							<!--advantage-card-->
-							<div class="advantage-card advantage-card3">
-								<div class="advantage-card__wrapper">
-									<div class="advantage-card__num">3</div>
-									<div class="advantage-card__text"><span>Заботимся о безопасности:</span> <br> мы разрабатываем отказоустойчивые решения, обеспечивающие сохранность персональных данных, следим за соответствием нормативным требованиям ФЗ 152 и сертификации по стандарту PCI DSS и регулярно проводим аудит разворачиваемых систем</div>
-								</div>
-								<div class="advantage-card__img"><img src="./img/advantages/spring.webp" srcset="./img/advantages/spring@2x.webp 2x" alt="donuts" width="663" height="577"/></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- PORTFOLIO-->
-			<section class="portfolio" id="portfolio">
-				<div class="container">
-					<div class="portfolio-content">
-						<!-- PORTFOLIO TITLE-->
-						<div class="portfolio__title">
-							<h2 class="section-title section-title--dark">Портфолио</h2>
-						</div>
-						<!-- PORTFOLIO CARDS-->
-						<div class="portfolio-wrapper">
-							<div class="portfolio-box1">
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card1">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title">ФК "Факел"</div>
-								</div>
-								<div class="portfolio-col">
-									<div class="portfolio-row">
-										<!--portfolio-card-->
-										<div class="portfolio-card portfolio-card2">
-											<div class="image-overlay">
-												<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-											</div>
-											<div class="portfolio-card__title">ФК "Локомотив"</div>
-										</div>
-										<!--portfolio-card-->
-										<div class="portfolio-card portfolio-card3">
-											<div class="image-overlay">
-												<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-											</div>
-											<div class="portfolio-card__title">ФК "Зенит"</div>
-										</div>
-									</div>
-									<div class="portfolio-row">
-										<!--portfolio-card-->
-										<div class="portfolio-card portfolio-card4 card-mob-hidden">
-											<div class="image-overlay">
-												<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-											</div>
-											<div class="portfolio-card__title">ФК "Спартак"</div>
-										</div>
-										<!--portfolio-card-->
-										<div class="portfolio-card portfolio-card5 card-mob-hidden">
-											<div class="image-overlay">
-												<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-											</div>
-											<div class="portfolio-card__title">ХК "Салават Юлаев"</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-box2">
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card6 card-mob-hidden">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title">ХК "Сочи"</div>
-								</div>
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card7 card-mob-hidden">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title">ФК "Динамо"</div>
-								</div>
-							</div>
-							<div class="portfolio-box3 hidden">
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card8">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title">ХК "Барыс"</div>
-								</div>
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card9">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title"></div>
-								</div>
-								<!--portfolio-card-->
-								<div class="portfolio-card portfolio-card10">
-									<div class="image-overlay">
-										<div class="portfolio-card__btn"><a class="btn-black">Узнать больше</a></div>
-									</div>
-									<div class="portfolio-card__title">ХК "Динамо"</div>
-								</div>
-							</div>
-						</div>
-						<!-- BUTTON-->
-						<button class="btn-show-more" id="show-more">Смотреть все проекты</button>
-					</div>
-				</div>
-			</section>
-			<!-- PRINCIPLES-->
-			<section class="principles">
-				<div class="container">
-					<div class="principles__top">
-						<!-- PRINCIPLES TITLE-->
-						<div class="principles__title">
-							<h2 class="section-title">Принципы работы <br> над проектом</h2>
-						</div>
-						<!-- PRINCIPLES SUBTITLE-->
-						<div class="principles__subtitle">
-							<p>Качественный продукт – наш абсолютный приоритет</p>
-						</div>
-					</div>
-					<div class="principles__row">
-						<!-- PRINCIPLES IMAGES-->
-						<div class="principles__images">
-							<div class="principles__rocket wow animate__rotateInUpRight"><img src="./img/principles/rocket.webp" srcset="./img/principles/rocket@2x.webp 2x" alt="rocket" width="217" height="265"/></div>
-							<div class="principles__project"><img class="principles__project-img" src="./img/principles/project.webp" srcset="./img/principles/project@2x.webp 2x" alt="project" width="994" height="792"/><img class="principles__project-img-mob" src="./img/principles/project-mob.webp" srcset="./img/principles/project-mob@2x.webp 2x" alt="project" width="361" height="355"/></div>
-						</div>
-						<!-- PRINCIPLES LIST-->
-						<div class="principles__col">
-							<ul class="principles-list">
-								<!-- PRINCIPLES LIST ITEM-->
-								<li class="principles-list__item">
-									<h3 class="principles-list__title">Четкое <br> целеполагание</h3>
-									<p>Вместе ответим на главные вопросы: какие проблемы решает проект, какие инструменты есть в наличии, а какие нужно разработать, определим сроки реализации и критерии эффективности</p>
-								</li>
-								<!-- PRINCIPLES LIST ITEM-->
-								<li class="principles-list__item">
-									<h3 class="principles-list__title">Прозрачная <br> разработка</h3>
-									<p>Подготовим план проекта, определим вехи, составим график работ и будем безапелляционно его придерживаться, предоставляя отчётность в нужном вам формате</p>
-								</li>
-								<!-- PRINCIPLES LIST ITEM-->
-								<li class="principles-list__item">
-									<h3 class="principles-list__title">Комплексный <br> запуск</h3>
-									<p>Протестируем работоспособность продукта, обучим ключевых сотрудников заказчика и предложим full-time техническую поддержку</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- CATALOG-->
-			<section class="catalog">
-				<div class="container">
-					<!-- CATALOG TITLE-->
-					<div class="catalog__title">
-						<h2 class="section-title">Каталог интеграций</h2>
-						<div class="accent-subtitle">с ключевыми игроками спортивной индустрии</div>
-					</div>
-					<!-- CATALOG LIST-->
-					<div class="catalog-list">
-						<!-- CATALOG LIST ITEM-->
-						<div class="catalog-list__item">
-							<div class="catalog-list__header" data-name="accordeon-title">
-								<h3 class="catalog-list__title">Билетные системы</h3>
-							</div>
-							<!-- HIDDEN-->
-							<div class="catalog-list__content">
-								<div class="catalog-list__wrapper">
-									<div class="catalog-list__text">
-										<p>Интеграция в части моментального процессинга транзакций с применением скидок в зависимости от статуса участия в программе лояльности, наличия купонов и промокодов.</p>
-									</div>
-									<div class="catalog-list__logos">
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/qtickets.svg" alt="logo" width="43" height="52"/></div><span>QTickets</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/infotech.svg" alt="logo" width="115" height="15"/></div><span>Инфотех</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/informatics.svg" alt="logo" width="187" height="15"/></div><span>Информатика</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/isd.svg" alt="logo" width="63" height="55"/></div><span>ISD</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/tickets.svg" alt="logo" width="54" height="54"/></div><span>Яндекс Билеты</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CATALOG LIST ITEM-->
-						<div class="catalog-list__item">
-							<div class="catalog-list__header" data-name="accordeon-title">
-								<h3 class="catalog-list__title">SMS и email-провайдеры</h3>
-							</div>
-							<!-- HIDDEN-->
-							<div class="catalog-list__content">
-								<div class="catalog-list__wrapper">
-									<div class="catalog-list__text">
-										<p>Интеграция в части реализации автоматизированных маркетинговых email и SMS-рассылок и транзакционных сообщений с возможностью сбора подробной статистики отклика на коммуникации.</p>
-									</div>
-									<div class="catalog-list__logos gap30">
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/sendsay.svg" alt="logo" width="51" height="58"/></div><span>Sendsay</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/devino.svg" alt="logo" width="51" height="51"/></div><span>Devino Telecom</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/terasms.svg" alt="logo" width="61" height="54"/></div><span>Terasms</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CATALOG LIST ITEM-->
-						<div class="catalog-list__item">
-							<div class="catalog-list__header" data-name="accordeon-title">
-								<h3 class="catalog-list__title">POS-терминалы</h3>
-							</div>
-							<!-- HIDDEN-->
-							<div class="catalog-list__content">
-								<div class="catalog-list__wrapper">
-									<div class="catalog-list__text">
-										<p>Интеграция в части онлайн обработки чеков с применением персональных скидок, начислением и списанием бонусов в соответствии с настройками в CRM-системе и маркетинговыми акциями.</p>
-									</div>
-									<div class="catalog-list__logos">
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/atol.svg" alt="logo" width="88" height="25"/></div><span>ATOL</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/r-keeper.svg" alt="logo" width="107" height="24"/></div><span>r_keeper</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/evotor.svg" alt="logo" width="54" height="54"/></div><span>Эвотор</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/1c.svg" alt="logo" width="110" height="54"/></div><span>1С:Розница</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/frontol6.svg" alt="logo" width="130" height="20"/></div><span>Фронтол</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/iiko.svg" alt="logo" width="39" height="54"/></div><span>IIKO</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CATALOG LIST ITEM-->
-						<div class="catalog-list__item">
-							<div class="catalog-list__header" data-name="accordeon-title">
-								<h3 class="catalog-list__title">ERP-системы</h3>
-							</div>
-							<!-- HIDDEN-->
-							<div class="catalog-list__content">
-								<div class="catalog-list__wrapper">
-									<div class="catalog-list__text">
-										<p>Интеграция в части синхронизации продуктовых каталогов, списка торговых точек, касс и контроля за складскими запасами.</p>
-									</div>
-									<div class="catalog-list__logos gap50">
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/mderp.svg" alt="logo" width="40" height="54"/></div><span>Microsoft Dynamics ERP</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/1c.svg" alt="logo" width="110" height="54"/></div><span>1C:УТ</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/1c-bitrix.svg" alt="logo" width="95" height="58"/></div><span>Битрикс24</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- CATALOG LIST ITEM-->
-						<div class="catalog-list__item">
-							<div class="catalog-list__header" data-name="accordeon-title">
-								<h3 class="catalog-list__title">СКУД-решения</h3>
-							</div>
-							<!-- HIDDEN-->
-							<div class="catalog-list__content">
-								<div class="catalog-list__wrapper">
-									<div class="catalog-list__text">
-										<p>Интеграция в части получения детализированной информации о факте посещения матчей по билетам и абонементам, времени и места прохода на стадион.</p>
-									</div>
-									<div class="catalog-list__logos gap50">
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/skidata.svg" alt="logo" width="163" height="38"/></div><span>SKIDATA</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/isd.svg" alt="logo" width="63" height="55"/></div><span>ISD</span>
-										</div>
-										<div class="catalog-list__logo">
-											<div class="catalog-list__img"><img src="./img/catalog/gorgona.svg" alt="logo" width="62" height="60"/></div><span>Горгона-М</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- INSTRUMENTS-->
-			<section class="instruments">
-				<div class="container">
-					<!-- INSTRUMENTS TOP-->
-					<div class="instruments__top">
-						<div class="instruments__title">
-							<h2 class="section-title">Наши инструменты</h2>
-						</div>
-						<div class="instruments__btn">
-							<button class="btn-send" data-modal-button="modal-call-form">Отправить заявку</button>
-						</div>
-					</div>
-					<!-- INSTRUMENTS LIST-->
-					<ul class="instruments-list">
-						<!-- INSTRUMENTS LIST ITEM-->
-						<li class="instruments-list__item">
-							<div class="instruments-list__title">CRM</div>
-							<div class="instruments-list__logos">
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1s">
-									<div class="instruments-list__img"><img src="./img/instruments/soap.svg" alt="icon" width="83" height="55"/></div><span>SOAP</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.2s">
-									<div class="instruments-list__img"><img src="./img/instruments/rest.svg" alt="icon" width="56" height="56"/></div><span>REST</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.4s">
-									<div class="instruments-list__img"><img src="./img/instruments/net.svg" alt="icon" width="97" height="39"/></div><span>.Net</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.6s">
-									<div class="instruments-list__img"><img src="./img/instruments/sql.svg" alt="icon" width="51" height="55"/></div><span>Sql</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.8s">
-									<div class="instruments-list__img"><img src="./img/instruments/microsoft.svg" alt="icon" width="55" height="55"/></div><span>Microsoft</span>
-								</div>
-							</div>
-						</li>
-						<!-- INSTRUMENTS LIST ITEM-->
-						<li class="instruments-list__item">
-							<div class="instruments-list__title">CDP</div>
-							<div class="instruments-list__logos">
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2s">
-									<div class="instruments-list__img"><img src="./img/instruments/clickhouse.svg" alt="icon" width="63" height="55"/></div><span>Clickhouse</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.2s">
-									<div class="instruments-list__img"><img src="./img/instruments/kafka.svg" alt="icon" width="34" height="55"/></div><span>Kafka</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.4s">
-									<div class="instruments-list__img"><img src="./img/instruments/redis.svg" alt="icon" width="64" height="55"/></div><span>Redis</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.6s">
-									<div class="instruments-list__img"><img src="./img/instruments/materialize.svg" alt="icon" width="102" height="52"/></div><span>Materialize</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.8s">
-									<div class="instruments-list__img"><img src="./img/instruments/KSQL.svg" alt="icon" width="34" height="62"/></div><span>ksqlDB</span>
-								</div>
-							</div>
-						</li>
-						<!-- INSTRUMENTS LIST ITEM-->
-						<li class="instruments-list__item">
-							<div class="instruments-list__title">BI</div>
-							<div class="instruments-list__logos">
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3s">
-									<div class="instruments-list__img"><img src="./img/instruments/excel.svg" alt="icon" width="55" height="55"/></div><span>Excel</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.2s">
-									<div class="instruments-list__img"><img src="./img/instruments/apache.svg" alt="icon" width="95" height="47"/></div><span>Apache superset</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.4s">
-									<div class="instruments-list__img"><img src="./img/instruments/power.svg" alt="icon" width="53" height="55"/></div><span>Power BI</span>
-								</div>
-								<div class="div instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.6s">
-									<div class="instruments-list__img"><img src="./img/instruments/metabase.svg" alt="icon" width="51" height="66"/></div><span>Metabase</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.8s">
-									<div class="instruments-list__img"><img src="./img/instruments/cube.svg" alt="icon" width="57" height="65"/></div><span>CubeJS</span>
-								</div>
-							</div>
-						</li>
-						<!-- INSTRUMENTS LIST ITEM-->
-						<li class="instruments-list__item">
-							<div class="instruments-list__title">Mobile & web applications</div>
-							<div class="instruments-list__logos">
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4s">
-									<div class="instruments-list__img"><img src="./img/instruments/kotlin.svg" alt="icon" width="55" height="55"/></div><span>Kotlin</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.2s">
-									<div class="instruments-list__img"><img src="./img/instruments/swift.svg" alt="icon" width="55" height="55"/></div><span>Swift</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.4s">
-									<div class="instruments-list__img"><img src="./img/instruments/flatter.svg" alt="icon" width="47" height="57"/></div><span>Flatter</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.6s">
-									<div class="instruments-list__img"><img src="./img/instruments/laravel.svg" alt="icon" width="53" height="55"/></div><span>Laravel</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.8s">
-									<div class="instruments-list__img"><img src="./img/instruments/bitrix.svg" alt="icon" width="57" height="57"/></div><span>Битрикс24</span>
-								</div>
-							</div>
-						</li>
-						<!-- INSTRUMENTS LIST ITEM-->
-						<li class="instruments-list__item">
-							<div class="instruments-list__title">OMAP
-								<p>(Omnichannel Marketing Automation Platforms)</p>
-							</div>
-							<div class="instruments-list__logos">
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5s">
-									<div class="instruments-list__img"><img src="./img/instruments/go.svg" alt="icon" width="53" height="55"/></div><span>Go</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.2s">
-									<div class="instruments-list__img"><img src="./img/instruments/mongo.svg" alt="icon" width="25" height="55"/></div><span>MongoDB</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.4s">
-									<div class="instruments-list__img"><img src="./img/instruments/clickhouse.svg" alt="icon" width="64" height="55"/></div><span>Clickhouse</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.6s">
-									<div class="instruments-list__img"><img src="./img/instruments/airflow.svg" alt="icon" width="55" height="55"/></div><span>Apache Airflow</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.8s">
-									<div class="instruments-list__img"><img src="./img/instruments/kafka.svg" alt="icon" width="34" height="55"/></div><span>Kafka</span>
-								</div>
-								<div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="6s">
-									<div class="instruments-list__img"><img src="./img/instruments/streams.svg" alt="icon" width="112" height="55"/></div><span>Kafka Streams</span>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="instruments__btn-mob">
-						<button class="btn-send" data-modal-button="modal-call-form">Отправить заявку</button>
-					</div>
-				</div>
-			</section>
-			<!--INTERFACE-->
-			<section class="interface">
-				<div class="container">
-					<div class="interface__top">
-						<!-- INTERFACE TITLE-->
-						<div class="interface__title">
-							<h2 class="section-title">Интерфейс нашего продукта</h2>
-						</div>
-						<div class="interface__btns">
-							<div class="interface-slider-controls">
-								<button class="slider-prev" id="interface-slider-prev">
-									<svg class="svg-prev">
-										<use href="./img/spriteSvg.svg#svg-prev"></use>
-									</svg>
-								</button>
-								<button class="slider-next" id="interface-slider-next">
-									<svg class="svg-next">
-										<use href="./img/spriteSvg.svg#svg-next"></use>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- INTERFACE SLIDER-->
-					<div class="interface-slider">
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Клиентские профили</div>
-									<div class="interface-card__subtitle">Сбор, хранение и систематизация данных клиентов в единой платформе</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Сегментация</div>
-									<div class="interface-card__subtitle">Гибкая система фильтров по расширенным атрибутам контактов</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Триггерные сценарии</div>
-									<div class="interface-card__subtitle">Настройка сценариев коммуникации любого уровня сложности для омникальных маркетинговых кампаний</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Механики с купонами</div>
-									<div class="interface-card__subtitle">Выпуск уникальных и массовых промокодов с адаптивными условиями действия</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Рассылки</div>
-									<div class="interface-card__subtitle">Маркетинговые рассылки, собираемые через встроенный редактор шаблонов</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-						<!-- INTERFACE SLIDE-->
-						<div class="interface-slide">
-							<div class="interface-card">
-								<div class="interface-card__top">
-									<div class="interface-card__title">Программа лояльности</div>
-									<div class="interface-card__subtitle">Настройка акционных правил программы лояльности со скидочными и бонусными механиками</div>
-								</div>
-								<div class="interface-card__img"><img src="./img/interface/interface03.svg" alt="img" width="783" height="405"/></div><a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
-									<svg class="svg-zoom">
-										<use href="./img/spriteSvg.svg#svg-zoom"></use>
-									</svg></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- REVIEWS-->
-			<section class="reviews">
-				<div class="container">
-					<div class="reviews-wrapper">
-						<!-- REVIEWS TITLE-->
-						<h2 class="section-title section-title--dark">Что говорят наши клиенты</h2>
-						<!-- REVIEWS SLIDER BTNS-->
-						<div class="reviews-slider-controls">
-							<button class="slider-prev" id="reviews-slider-prev">
-								<svg class="svg-prev">
-									<use href="./img/spriteSvg.svg#svg-prev"></use>
-								</svg>
-							</button>
-							<button class="slider-next" id="reviews-slider-next">
-								<svg class="svg-next">
-									<use href="./img/spriteSvg.svg#svg-next"></use>
-								</svg>
-							</button>
-						</div>
-						<!-- REVIEWS SLIDER-->
-						<div class="reviews-slider">
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo01.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ХК "Сочи"</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Ценность программы лояльности для клуба заключается в получении информации о своих болельщиках и их потребностях для выстраивания эффективной маркетинговой деятельности.Внедрив решение Manzana Loyalty Sport, мы получили полный набор инструментов для интеллектуального маркетингового анализа клиентской базы. Например, мы используем RFM-анализ, сегментацию по дате последней покупки, соцдем-признакам и географии.Это дает нам возможность выстраивать эффективную систему массовых и целевых коммуникаций.</p>
-											<p>Сегодня мы возлагаем большие надежды на систему управления программой лояльности как ключевую часть развития клуба.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo02.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ФК «Динамо»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>В «Динамо» во главу угла ставится не только достижение спортивных результатов, но и выстраивание эффективных бизнес-процессов, подразумевающих чёткую стратегию взаимодействия с окружающей средой: болельщиками, партнёрами и спонсорами. Для достижения высоких целей было важно привлечь компанию, обладающую передовой экспертизой в выстраивании комплексных решений в области больших данных. Именно поэтому - в 2019 году - выбор был сделан в пользу Manzana Sport.</p>
-											<p>В числе неоспоримых конкурентных преимуществ Manzana необходимо выделить локальную техническую поддержку разработок, что критически важно в контексте защиты инвестиций, а также для ведения бесперебойной и планомерной работы по развитию бренда клуба в текущих реалиях.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo03.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ФК «Локомотив»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Вместе с Manzana Sport нам удалось внедрить современную программу лояльности «Состав», интегрированную с надёжной CRM-системой, запустить новый интернет-магазин и единый личный кабинет.</p>
-											<p>Мы работаем с коллегами уже 3 год и можем отметить их высокую степень заинтересованности в совместном развитии продуктов.</p>
-											<p>Специалисты Manzana Sport оперативно оказывают необходимую техническую поддержку, предлагают актуальные рекомендации по управлению программой лояльности и реализуют новую функциональность по нашим запросам.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo04.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ФК «Спартак»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Выбрать CRM-систему и партнера для ее запуска оказалось не такой простой задачей. Мы просмотрели несколько компаний и остановили свой выбор на Manzana Group. Нам показалось, что у специалистов Manzana Group достаточно опыта в сложных проектах, чтобы помочь нам решить наши задачи очень быстро и надежно. И по прошествии времени мы видим, что в своем выборе не ошиблись. Весь проект был реализован вовремя, и мы получили широкий инструментарий для работы с нашим фан-клубом и посетителями стадиона.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo05.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ФК «Зенит»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Выбрать CRM-систему и партнера для ее запуска оказалось не такой простой задачей. Мы просмотрели несколько компаний и остановили свой выбор на Manzana Group. Нам показалось, что у специалистов Manzana Group достаточно опыта в сложных проектах, чтобы помочь нам решить наши задачи очень быстро и надежно. И по прошествии времени мы видим, что в своем выборе не ошиблись. Весь проект был реализован вовремя, и мы получили широкий инструментарий для работы с нашим фан-клубом и посетителями стадиона.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo06.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ХК «Салават Юлаев»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Для того чтобы вывести уровень отношений с болельщиками на новый уровень, руководство хоккейного клуба «Салават Юлаев» в 2016 году приняло решение о запуске программы лояльности болельщиков на основе решения Manzana Loyalty Sport.</p>
-											<p>Главной концепцией проекта стала цель - не ограничиваться предложением дисконтной программы «Карта Болельщика», а создать абсолютно новую информационную систему, в периметре которой болельщики будут взаимодействовать с билетной программой, магазинами атрибутики, точками общепита и интернет-магазином клуба.</p>
-											<p>Особо требовательной аудиторией для любого клуба являются владельцы сезонных абонементов, верные болельщики, ожидающие взамен своей преданности, затратам времени и средств особое отношение со стороны клуба.</p>
-											<p>Для них была разработана уникальная система поощрения посещаемости: самые верные болельщики, посещающие максимальное количество матчей всех категорий, получают от клуба наибольшую признательность. Данный подход лег в основу абонементной политики клуба на ближайшие сезоны.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- REVIEWS SLIDE-->
-							<div class="reviews-slide">
-								<div class="review-card">
-									<div class="review-card__img"><img src="./img/reviews/logo07.svg" alt="logo" width="36" height="87"/></div>
-									<div class="review-card__title">ФК «Факел»</div>
-									<div class="review-card__text">
-										<div class="scroll-wrapper">
-											<p>Развитие отношений с болельщиками и повышение лояльной аудитории – наш абсолютный приоритет.</p>
-											<p>Мы рады предложить факелонам качественные продукты, разработанные совместно с Manzana Sport. Благодаря коллегам у нас появились полноценная CRM-система, новая программа лояльности, интернет-магазин и личный кабинет болельщика. Всё реализовано на высшем уровне, качественно и в срок. Дальше – больше.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="reviews__img"><img src="./img/intersect.svg" alt="logo" width="36" height="87"/></div>
-					</div>
-				</div>
-			</section>
-			<!-- RUNNING LINE-->
-			<section class="running-line">
-				<!-- RUNNING LINE SLIDER-->
-				<div class="line-slider">
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-					<div class="line-slide">
-						<div class="line-text">Cпорт - часть большой семьи!</div>
-					</div>
-				</div>
-			</section>
-			<!-- PLATFORM-->
-			<section class="platfrom">
-				<div class="container">
-					<div class="platform-content">
-						<div class="platform__logo"><img src="./img/platform/platform-logo.svg" alt="logo" width="523" height="129"/></div>
-						<!-- PLATFORM TITLE-->
-						<div class="platform__title">
-							<h2 class="title">Интеллектуальная платформа лояльности</h2>
-						</div>
-						<h3 class="platform__subtitle">Помогаем строить персональные отношения с миллионами клиентов</h3>
-						<div class="platform__images">
-							<div class="platform__bg"><img src="./img/platform/background.webp" srcset="./img/platform/background@2x.webp 2x" alt="background" width="906" height="563"/></div>
-							<div class="platform__decor"><img src="./img/platform/ellipse.svg" alt="decor" width="906" height="503"/></div>
-						</div>
-						<div class="platform__img-mob"><img src="./img/platform/platform-bg.webp" srcset="./img/platform/platform-bg@2x.webp 2x" alt="background" width="906" height="563"/></div>
-						<div class="platform__btn"><a class="btn-yellow" href="#!">Узнать больше</a></div>
-					</div>
-				</div>
-			</section>
-			<!-- CONTACT-->
-			<section class="contact">
-				<div class="container">
-					<div class="contact-wrapper">
-						<div class="contact__img"><img src="./img/contact/contact-bg.webp" srcset="./img/contact/contact-bg@2x.webp 2x" alt="background" width="1019" height="587"/></div>
-						<!-- CONTACT TITLE-->
-						<div class="contact__title">
-							<h2 class="title">Начнем сотрудничество?</h2>
-						</div>
-						<!-- CONTACT FORM-->
-						<div class="contact-form-wrapper">
-							<form class="form contact-form">
-								<input type="hidden" name="form_name" value="Форма"/>
-								<div class="form-item form-item-mb15">
-									<input class="form-input" type="text" name="name" placeholder="Имя"/>
-								</div>
-								<div class="form-item form-item-mb15">
-									<input class="form-input" type="text" name="mail" placeholder="Email"/>
-								</div>
-								<div class="form-item form-item-mb15">
-									<input class="form-input" type="text" name="tel" placeholder="Телефон"/>
-								</div>
-								<div class="form-item form-item-mb15">
-									<textarea class="form-input form-input--textarea" name="message" placeholder="Расскажите о вашей задаче"></textarea>
-								</div>
-								<div class="form-item form-item-mb25">
-									<label class="checkbox">
-										<input class="real-checkbox" type="checkbox" name="privacy" checked="checked"/><span class="custom-checkbox"></span><a class="call-form-privacy" href="#!">Согласен с политикой обработки данных</a>
-									</label>
-								</div>
-								<div class="form-item form-item-btn">
-									<button class="submit-btn" type="submit">Отправить запрос</button>
-								</div>
-							</form>
-						</div>
-						<div class="contact__images-mob">
-							<div class="contact__decor-mob"><img src="./img/contact/ellipse-contact.svg" alt="decor" width="577" height="577"/></div>
-							<div class="contact__img-mob"><img src="./img/contact/contact-bg-mob.webp" srcset="./img/contact/contact-bg-mob@2x.webp 2x" alt="background" width="335" height="354"/></div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<!-- FOOTER-->
-		<div class="footer">
-			<div class="container">
-				<div class="footer-top">
-					<div class="footer-top-wrapper">
-						<div class="footer__logo"><img src="./img/logo-footer.svg" alt="manzana group" width="358" height="58"/></div>
-						<div class="footer__menu"><a href="index.html">Главная</a><a href="#!">Экспертиза</a><a href="#portfolio">Портфолио</a></div>
-					</div>
-					<div class="footer__copyright">© 2006–2025 Manzana Group</div>
-				</div>
-				<div class="footer-bottom">
-					<!-- CONTACTS-->
-					<ul class="footer__contacts">
-						<li><span>Телефон:</span><a class="footer__contacts-tel" href="tel:+78007750111">8(800)7750111</a></li>
-						<li><span>Почта:</span><a class="footer__contacts-mail" href="mailto:welcome@manzanagroup.ru">welcome@manzanagroup.ru</a></li>
-					</ul>
-					<div class="footer__block">
-						<div class="footer__img"><img src="./img/footer-img.svg" alt="footer img" width="65" height="45"/></div><a class="footer__agreement" href="#!">Пользовательское соглашение</a>
-					</div>
-				</div>
-				<div class="footer__copyright-mob">© 2006–2025 Manzana Group</div>
-			</div>
-		</div>
-		<script src="libs/jquery/jquery-3.7.0.min.js"></script>
-		<script src="libs/slick/slick.min.js"></script>
-		<script src="libs/fancybox/fancybox.umd.js"></script>
-		<script src="libs/wow/wow.min.js"></script>
-		<script src="js/main.min.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./libs/slick/slick.css" />
+  <link rel="stylesheet" href="./libs/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Page</title>
+</head>
+
+<body>
+  <!-- HEADER-->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <!-- LOGO-->
+        <a class="header__logo" href="#!">
+          <img src="./img/logo.svg" width="328" height="53" alt="manzana group" />
+        </a>
+        <div class="menu">
+          <!-- NAV-->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li>
+                <a href="#services">Направления</a>
+              </li>
+              <li>
+                <a href="#!">Экспертиза</a>
+              </li>
+              <li>
+                <a href="#portfolio">Портфолио</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- CONTACTS-->
+          <ul class="header__contacts">
+            <li>
+              <span>Телефон:</span>
+              <a class="header__contacts-tel" href="tel:+78007750111">8 (800) 775 0111</a>
+            </li>
+            <li>
+              <span>Почта:</span>
+              <a class="header__contacts-mail" href="mailto:welcome@manzanagroup.ru">welcome@manzanagroup.ru</a>
+            </li>
+          </ul>
+          <div class="header__btn">
+            <button class="btn" data-modal-button="modal-call-form">Написать нам</button>
+          </div>
+        </div>
+        <!-- BURGER-->
+        <button class="menu-toggle">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- OVERLAY-->
+    <div class="overlay"></div>
+  </header>
+  <!-- MODAL-->
+  <div class="fade-block hidden" data-modal="modal-call-form" id="modal-call-form">
+    <div class="modal-window">
+      <!-- call-form-block-->
+      <div class="call-form-block">
+        <button class="btn-close-modal" data-modal-close="data-modal-close">
+          <svg class="svg-close">
+            <use href="./img/spriteSvg.svg#svg-close"></use>
+          </svg>
+        </button>
+        <form class="form call-form">
+          <input type="hidden" name="form_name" value="Начнем сотрудничество" />
+          <div class="form-title">Начнем
+            <br> сотрудничество?
+          </div>
+          <div class="call-form-subtitle">Заполните форму ниже, мы свяжемся с вами и обсудим все детали</div>
+          <div class="form-item form-item-mb15">
+            <input class="form-input" type="text" name="name" placeholder="Имя" />
+          </div>
+          <div class="form-item form-item-mb15">
+            <input class="form-input" type="text" name="mail" placeholder="Email" />
+          </div>
+          <div class="form-item form-item-mb15">
+            <textarea class="form-input form-input--textarea" name="message" placeholder="Расскажите о вашей задаче"></textarea>
+          </div>
+          <div class="form-item form-item-mb25">
+            <label class="checkbox">
+              <input class="real-checkbox" type="checkbox" name="privacy" checked="checked" />
+              <span class="custom-checkbox"></span>
+              <a class="call-form-privacy" href="#!">Согласен(-на) с политикой обработки данных</a>
+            </label>
+          </div>
+          <div class="form-item form-item-btn">
+            <button class="submit-btn" type="submit">Отправить запрос</button>
+          </div>
+        </form>
+        <div class="call-form-block__img">
+          <img src="./img/advantages/star.webp" srcset="./img/advantages/star@2x.webp 2x" width="529" height="540" alt="star" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL-->
+  <div class="fade-block hidden" data-modal="modal-response" id="modal-response">
+    <div class="modal-window">
+      <!-- response-->
+      <div class="response">
+        <button class="btn-close-modal" data-modal-close="data-modal-close">
+          <svg class="svg-close">
+            <use href="./img/spriteSvg.svg#svg-close"></use>
+          </svg>
+        </button>
+        <div class="response__img">
+          <img src="./img/response-img.webp" alt="logo" width="145" height="252" />
+        </div>
+        <div class="response__title">Ваш запрос отправлен!</div>
+        <div class="response__text">Спасибо за интерес к Manzana Sport.
+          <br> Мы свяжемся с Вами в течение 24 часов.
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <!-- HERO-->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <!-- HERO TITLE-->
+          <div class="hero__title">
+            <h1 class="headline wow animate__fadeInLeft" data-wow-delay=".5s">
+              Помогаем спорту
+              <br />
+              <span>стать лучше</span>
+            </h1>
+          </div>
+          <h2 class="hero__text wow animate__fadeInLeft" data-wow-delay="1s">Cистема управления спортивными клубами, сооружениями и взаимоотношениями с болельщиками</h2>
+          <!-- DISCUSS BTN-->
+          <div class="hero__discuss">
+            <button class="btn-discuss" data-modal-button="modal-call-form">
+              <span class="button-overlay"></span>
+              <img class="btn-discuss__text" src="./img/hero/discuss-text.svg" alt="discuss project" width="142" height="143" />
+              <img class="btn-discuss__arrow" src="./img/hero/discuss-arrow.webp" srcset="./img/hero/discuss-arrow@2x.webp 2x" alt="discuss btn" width="72" height="73" />
+            </button>
+          </div>
+          <div class="hero__images">
+            <div class="hero__decor">
+              <img src="./img/hero/ellipse.svg" alt="decor" width="1070" height="1070" />
+            </div>
+            <div class="hero__gates">
+              <img src="./img/hero/gates.webp" srcset="./img/hero/gates@2x.webp 2x" alt="gates" width="730" height="730" />
+            </div>
+            <div class="hero__ball">
+              <img src="./img/hero/green-ball.webp" srcset="./img/hero/green-ball@2x.webp 2x" alt="ball" width="450" height="450" />
+            </div>
+            <img class="hero__puck" src="./img/hero/puck.webp" srcset="./img/hero/puck@2x.webp 2x" alt="puck" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PARTNERS-->
+    <section class="partners">
+      <div class="container">
+        <div class="partners-wrapper">
+          <!-- PARTNERS TITLE-->
+          <div class="partners__title-wrapper">
+            <h2 class="partners__title">Нам доверяют</h2>
+          </div>
+          <!-- PARTNERS SLIDER-->
+          <div class="partners-slider">
+            <div class="partner-slide">
+              <img src="./img/partners/partner01.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner02.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner03.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner04.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner05.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner06.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner07.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner08.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner09.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner10.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner11.svg" alt="logo img" />
+            </div>
+            <div class="partner-slide">
+              <img src="./img/partners/partner12.svg" alt="logo img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES-->
+    <section class="services" id="services">
+      <div class="container">
+        <!-- SERVICES CARDS-->
+        <div class="services-cards">
+          <!-- service-card-->
+          <a class="service-card" href="#!">
+            <div class="fake-border"></div>
+            <div class="service-card__row">
+              <div class="service-card__img">
+                <svg class="svg-cdp">
+                  <use href="./img/spriteSvg.svg#svg-cdp"></use>
+                </svg>
+              </div>
+              <h3 class="service-card__title">CDP-решения и программы лояльности</h3>
+            </div>
+            <div class="service-card__footer">
+              <div class="service-card__link">Подробнее</div>
+            </div>
+          </a>
+          <!-- service-card-->
+          <a class="service-card" href="#!">
+            <div class="fake-border"></div>
+            <div class="service-card__row">
+              <div class="service-card__img">
+                <svg class="svg-web">
+                  <use href="./img/spriteSvg.svg#svg-web"></use>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Мобильная и веб-разработка</h3>
+            </div>
+            <div class="service-card__footer">
+              <div class="service-card__link">Подробнее</div>
+            </div>
+          </a>
+          <!-- service-card-->
+          <a class="service-card" href="#!">
+            <div class="fake-border"></div>
+            <div class="service-card__row">
+              <div class="service-card__img">
+                <svg class="svg-marketing">
+                  <use href="./img/spriteSvg.svg#svg-marketing"></use>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Маркетинговая поддержка</h3>
+            </div>
+            <div class="service-card__footer">
+              <div class="service-card__link">Подробнее</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT-->
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <!-- ABOUT TITLE-->
+          <h2 class="about__title">Кто мы</h2>
+          <!-- ABOUT CARDS-->
+          <div class="about-wrapper">
+            <!-- about-card-->
+            <div class="about-card">
+              <img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32" />
+              <p class="about-card__text">
+                <span>Полностью российская сертифицированная компания,</span> предоставляющая продукт c гибкой технической архитектурой решения: on-premise и SaaS
+              </p>
+            </div>
+            <!-- about-card-->
+            <div class="about-card">
+              <img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32" />
+              <p class="about-card__text">
+                <span>20 лет на рынке</span> бизнес-консалтинга и более 300 внедрённых систем управления программами лояльности в спорте, сфере развлечений и рознице
+              </p>
+            </div>
+            <!-- about-card-->
+            <div class="about-card">
+              <img class="about-card__img" src="./img/intersect.svg" alt="icon" width="32" height="32" />
+              <p class="about-card__text">Более <span>250 штатных экспертов</span> с многолетним опытом работы в продуктовом IT, бренд-менеджменте, digital маркетинге, event-менеджменте, маркетинговых и PR-коммуникациях</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ADVANTAGES-->
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages-content">
+          <!-- ADVANTAGES TITLE-->
+          <div class="advantages__title">
+            <h2 class="section-title">В чем наша сила</h2>
+          </div>
+          <!-- ADVANTAGES CARDS-->
+          <div class="advantages-cards">
+            <!--advantage-card-->
+            <div class="advantage-card advantage-card1">
+              <div class="advantage-card__wrapper">
+                <div class="advantage-card__num">1</div>
+                <div class="advantage-card__text">
+                  <span>Нам доверяют лучшие:</span>
+                  <br> ТОП-клубы РПЛ, обладающие более 80% клиентских данных в российском спорте, уже используют решение Manzana для работы со своими болельщиками
+                </div>
+              </div>
+              <div class="advantage-card__img">
+                <img src="./img/advantages/star.webp" srcset="./img/advantages/star@2x.webp 2x" width="529" height="540" alt="star" />
+              </div>
+            </div>
+            <!--advantage-card-->
+            <div class="advantage-card advantage-card2">
+              <div class="advantage-card__wrapper">
+                <div class="advantage-card__num">2</div>
+                <div class="advantage-card__text">
+                  <span>Мы непрерывно инвестируем в развитие продукта</span> и предлагаем адаптивные CDP-решения, интегрированные с основными билетными системами, СКУД, eComm-платформами, провайдерами коммуникаций и другими игроками Sport tech рынка России
+                </div>
+              </div>
+              <div class="advantage-card__img">
+                <img src="./img/advantages/donuts.webp" srcset="./img/advantages/donuts@2x.webp 2x" alt="donuts" width="541" height="553" />
+              </div>
+            </div>
+            <!--advantage-card-->
+            <div class="advantage-card advantage-card3">
+              <div class="advantage-card__wrapper">
+                <div class="advantage-card__num">3</div>
+                <div class="advantage-card__text">
+                  <span>Заботимся о безопасности:</span>
+                  <br> мы разрабатываем отказоустойчивые решения, обеспечивающие сохранность персональных данных, следим за соответствием нормативным требованиям ФЗ 152 и сертификации по стандарту PCI DSS и регулярно проводим аудит разворачиваемых систем
+                </div>
+              </div>
+              <div class="advantage-card__img">
+                <img src="./img/advantages/spring.webp" srcset="./img/advantages/spring@2x.webp 2x" alt="donuts" width="663" height="577" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PORTFOLIO-->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="portfolio-content">
+          <!-- PORTFOLIO TITLE-->
+          <div class="portfolio__title">
+            <h2 class="section-title section-title--dark">Портфолио</h2>
+          </div>
+          <!-- PORTFOLIO CARDS-->
+          <div class="portfolio-wrapper">
+            <div class="portfolio-box1">
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card1">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title">ФК "Факел"</div>
+              </div>
+              <div class="portfolio-col">
+                <div class="portfolio-row">
+                  <!--portfolio-card-->
+                  <div class="portfolio-card portfolio-card2">
+                    <div class="image-overlay">
+                      <div class="portfolio-card__btn">
+                        <a class="btn-black">Узнать больше</a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card__title">ФК "Локомотив"</div>
+                  </div>
+                  <!--portfolio-card-->
+                  <div class="portfolio-card portfolio-card3">
+                    <div class="image-overlay">
+                      <div class="portfolio-card__btn">
+                        <a class="btn-black">Узнать больше</a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card__title">ФК "Зенит"</div>
+                  </div>
+                </div>
+                <div class="portfolio-row">
+                  <!--portfolio-card-->
+                  <div class="portfolio-card portfolio-card4 card-mob-hidden">
+                    <div class="image-overlay">
+                      <div class="portfolio-card__btn">
+                        <a class="btn-black">Узнать больше</a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card__title">ФК "Спартак"</div>
+                  </div>
+                  <!--portfolio-card-->
+                  <div class="portfolio-card portfolio-card5 card-mob-hidden">
+                    <div class="image-overlay">
+                      <div class="portfolio-card__btn">
+                        <a class="btn-black">Узнать больше</a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card__title">ХК "Салават Юлаев"</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-box2">
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card6 card-mob-hidden">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title">ХК "Сочи"</div>
+              </div>
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card7 card-mob-hidden">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title">ФК "Динамо"</div>
+              </div>
+            </div>
+            <div class="portfolio-box3 hidden">
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card8">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title">ХК "Барыс"</div>
+              </div>
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card9">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title"></div>
+              </div>
+              <!--portfolio-card-->
+              <div class="portfolio-card portfolio-card10">
+                <div class="image-overlay">
+                  <div class="portfolio-card__btn">
+                    <a class="btn-black">Узнать больше</a>
+                  </div>
+                </div>
+                <div class="portfolio-card__title">ХК "Динамо"</div>
+              </div>
+            </div>
+          </div>
+          <!-- BUTTON-->
+          <button class="btn-show-more" id="show-more">Смотреть все проекты</button>
+        </div>
+      </div>
+    </section>
+    <!-- PRINCIPLES-->
+    <section class="principles">
+      <div class="container">
+        <div class="principles__top">
+          <!-- PRINCIPLES TITLE-->
+          <div class="principles__title">
+            <h2 class="section-title">Принципы работы
+              <br> над проектом
+            </h2>
+          </div>
+          <!-- PRINCIPLES SUBTITLE-->
+          <div class="principles__subtitle">
+            <p>Качественный продукт – наш абсолютный приоритет</p>
+          </div>
+        </div>
+        <div class="principles__row">
+          <!-- PRINCIPLES IMAGES-->
+          <div class="principles__images">
+            <div class="principles__rocket wow animate__rotateInUpRight">
+              <img src="./img/principles/rocket.webp" srcset="./img/principles/rocket@2x.webp 2x" alt="rocket" width="217" height="265" />
+            </div>
+            <div class="principles__project">
+              <img class="principles__project-img" src="./img/principles/project.webp" srcset="./img/principles/project@2x.webp 2x" alt="project" width="994" height="792" />
+              <img class="principles__project-img-mob" src="./img/principles/project-mob.webp" srcset="./img/principles/project-mob@2x.webp 2x" alt="project" width="361" height="355" />
+            </div>
+          </div>
+          <!-- PRINCIPLES LIST-->
+          <div class="principles__col">
+            <ul class="principles-list">
+              <!-- PRINCIPLES LIST ITEM-->
+              <li class="principles-list__item">
+                <h3 class="principles-list__title">Четкое
+                  <br> целеполагание
+                </h3>
+                <p>Вместе ответим на главные вопросы: какие проблемы решает проект, какие инструменты есть в наличии, а какие нужно разработать, определим сроки реализации и критерии эффективности</p>
+              </li>
+              <!-- PRINCIPLES LIST ITEM-->
+              <li class="principles-list__item">
+                <h3 class="principles-list__title">Прозрачная
+                  <br> разработка
+                </h3>
+                <p>Подготовим план проекта, определим вехи, составим график работ и будем безапелляционно его придерживаться, предоставляя отчётность в нужном вам формате</p>
+              </li>
+              <!-- PRINCIPLES LIST ITEM-->
+              <li class="principles-list__item">
+                <h3 class="principles-list__title">Комплексный
+                  <br> запуск
+                </h3>
+                <p>Протестируем работоспособность продукта, обучим ключевых сотрудников заказчика и предложим full-time техническую поддержку</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CATALOG-->
+    <section class="catalog">
+      <div class="container">
+        <!-- CATALOG TITLE-->
+        <div class="catalog__title">
+          <h2 class="section-title">Каталог интеграций</h2>
+          <div class="accent-subtitle">с ключевыми игроками спортивной индустрии</div>
+        </div>
+        <!-- CATALOG LIST-->
+        <div class="catalog-list">
+          <!-- CATALOG LIST ITEM-->
+          <div class="catalog-list__item">
+            <div class="catalog-list__header" data-name="accordeon-title">
+              <h3 class="catalog-list__title">Билетные системы</h3>
+            </div>
+            <!-- HIDDEN-->
+            <div class="catalog-list__content">
+              <div class="catalog-list__wrapper">
+                <div class="catalog-list__text">
+                  <p>Интеграция в части моментального процессинга транзакций с применением скидок в зависимости от статуса участия в программе лояльности, наличия купонов и промокодов.</p>
+                </div>
+                <div class="catalog-list__logos">
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/qtickets.svg" alt="logo" width="43" height="52" />
+                    </div>
+                    <span>QTickets</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/infotech.svg" alt="logo" width="115" height="15" />
+                    </div>
+                    <span>Инфотех</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/informatics.svg" alt="logo" width="187" height="15" />
+                    </div>
+                    <span>Информатика</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/isd.svg" alt="logo" width="63" height="55" />
+                    </div>
+                    <span>ISD</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/tickets.svg" alt="logo" width="54" height="54" />
+                    </div>
+                    <span>Яндекс Билеты</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CATALOG LIST ITEM-->
+          <div class="catalog-list__item">
+            <div class="catalog-list__header" data-name="accordeon-title">
+              <h3 class="catalog-list__title">SMS и email-провайдеры</h3>
+            </div>
+            <!-- HIDDEN-->
+            <div class="catalog-list__content">
+              <div class="catalog-list__wrapper">
+                <div class="catalog-list__text">
+                  <p>Интеграция в части реализации автоматизированных маркетинговых email и SMS-рассылок и транзакционных сообщений с возможностью сбора подробной статистики отклика на коммуникации.</p>
+                </div>
+                <div class="catalog-list__logos gap30">
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/sendsay.svg" alt="logo" width="51" height="58" />
+                    </div>
+                    <span>Sendsay</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/devino.svg" alt="logo" width="51" height="51" />
+                    </div>
+                    <span>Devino Telecom</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/terasms.svg" alt="logo" width="61" height="54" />
+                    </div>
+                    <span>Terasms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CATALOG LIST ITEM-->
+          <div class="catalog-list__item">
+            <div class="catalog-list__header" data-name="accordeon-title">
+              <h3 class="catalog-list__title">POS-терминалы</h3>
+            </div>
+            <!-- HIDDEN-->
+            <div class="catalog-list__content">
+              <div class="catalog-list__wrapper">
+                <div class="catalog-list__text">
+                  <p>Интеграция в части онлайн обработки чеков с применением персональных скидок, начислением и списанием бонусов в соответствии с настройками в CRM-системе и маркетинговыми акциями.</p>
+                </div>
+                <div class="catalog-list__logos">
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/atol.svg" alt="logo" width="88" height="25" />
+                    </div>
+                    <span>ATOL</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/r-keeper.svg" alt="logo" width="107" height="24" />
+                    </div>
+                    <span>r_keeper</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/evotor.svg" alt="logo" width="54" height="54" />
+                    </div>
+                    <span>Эвотор</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/1c.svg" alt="logo" width="110" height="54" />
+                    </div>
+                    <span>1С:Розница</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/frontol6.svg" alt="logo" width="130" height="20" />
+                    </div>
+                    <span>Фронтол</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/iiko.svg" alt="logo" width="39" height="54" />
+                    </div>
+                    <span>IIKO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CATALOG LIST ITEM-->
+          <div class="catalog-list__item">
+            <div class="catalog-list__header" data-name="accordeon-title">
+              <h3 class="catalog-list__title">ERP-системы</h3>
+            </div>
+            <!-- HIDDEN-->
+            <div class="catalog-list__content">
+              <div class="catalog-list__wrapper">
+                <div class="catalog-list__text">
+                  <p>Интеграция в части синхронизации продуктовых каталогов, списка торговых точек, касс и контроля за складскими запасами.</p>
+                </div>
+                <div class="catalog-list__logos gap50">
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/mderp.svg" alt="logo" width="40" height="54" />
+                    </div>
+                    <span>Microsoft Dynamics ERP</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/1c.svg" alt="logo" width="110" height="54" />
+                    </div>
+                    <span>1C:УТ</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/1c-bitrix.svg" alt="logo" width="95" height="58" />
+                    </div>
+                    <span>Битрикс24</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CATALOG LIST ITEM-->
+          <div class="catalog-list__item">
+            <div class="catalog-list__header" data-name="accordeon-title">
+              <h3 class="catalog-list__title">СКУД-решения</h3>
+            </div>
+            <!-- HIDDEN-->
+            <div class="catalog-list__content">
+              <div class="catalog-list__wrapper">
+                <div class="catalog-list__text">
+                  <p>Интеграция в части получения детализированной информации о факте посещения матчей по билетам и абонементам, времени и места прохода на стадион.</p>
+                </div>
+                <div class="catalog-list__logos gap50">
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/skidata.svg" alt="logo" width="163" height="38" />
+                    </div>
+                    <span>SKIDATA</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/isd.svg" alt="logo" width="63" height="55" />
+                    </div>
+                    <span>ISD</span>
+                  </div>
+                  <div class="catalog-list__logo">
+                    <div class="catalog-list__img">
+                      <img src="./img/catalog/gorgona.svg" alt="logo" width="62" height="60" />
+                    </div>
+                    <span>Горгона-М</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- INSTRUMENTS-->
+    <section class="instruments">
+      <div class="container">
+        <!-- INSTRUMENTS TOP-->
+        <div class="instruments__top">
+          <div class="instruments__title">
+            <h2 class="section-title">Наши инструменты</h2>
+          </div>
+          <div class="instruments__btn">
+            <button class="btn-send" data-modal-button="modal-call-form">Отправить заявку</button>
+          </div>
+        </div>
+        <!-- INSTRUMENTS LIST-->
+        <ul class="instruments-list">
+          <!-- INSTRUMENTS LIST ITEM-->
+          <li class="instruments-list__item">
+            <div class="instruments-list__title">CRM</div>
+            <div class="instruments-list__logos">
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/soap.svg" alt="icon" width="83" height="55" />
+                </div>
+                <span>SOAP</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/rest.svg" alt="icon" width="56" height="56" />
+                </div>
+                <span>REST</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/net.svg" alt="icon" width="97" height="39" />
+                </div>
+                <span>.Net</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/sql.svg" alt="icon" width="51" height="55" />
+                </div>
+                <span>Sql</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="1.8s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/microsoft.svg" alt="icon" width="55" height="55" />
+                </div>
+                <span>Microsoft</span>
+              </div>
+            </div>
+          </li>
+          <!-- INSTRUMENTS LIST ITEM-->
+          <li class="instruments-list__item">
+            <div class="instruments-list__title">CDP</div>
+            <div class="instruments-list__logos">
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/clickhouse.svg" alt="icon" width="63" height="55" />
+                </div>
+                <span>Clickhouse</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/kafka.svg" alt="icon" width="34" height="55" />
+                </div>
+                <span>Kafka</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/redis.svg" alt="icon" width="64" height="55" />
+                </div>
+                <span>Redis</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/materialize.svg" alt="icon" width="102" height="52" />
+                </div>
+                <span>Materialize</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="2.8s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/KSQL.svg" alt="icon" width="34" height="62" />
+                </div>
+                <span>ksqlDB</span>
+              </div>
+            </div>
+          </li>
+          <!-- INSTRUMENTS LIST ITEM-->
+          <li class="instruments-list__item">
+            <div class="instruments-list__title">BI</div>
+            <div class="instruments-list__logos">
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/excel.svg" alt="icon" width="55" height="55" />
+                </div>
+                <span>Excel</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/apache.svg" alt="icon" width="95" height="47" />
+                </div>
+                <span>Apache superset</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/power.svg" alt="icon" width="53" height="55" />
+                </div>
+                <span>Power BI</span>
+              </div>
+              <div class="div instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/metabase.svg" alt="icon" width="51" height="66" />
+                </div>
+                <span>Metabase</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="3.8s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/cube.svg" alt="icon" width="57" height="65" />
+                </div>
+                <span>CubeJS</span>
+              </div>
+            </div>
+          </li>
+          <!-- INSTRUMENTS LIST ITEM-->
+          <li class="instruments-list__item">
+            <div class="instruments-list__title">Mobile & web applications</div>
+            <div class="instruments-list__logos">
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/kotlin.svg" alt="icon" width="55" height="55" />
+                </div>
+                <span>Kotlin</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/swift.svg" alt="icon" width="55" height="55" />
+                </div>
+                <span>Swift</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/flatter.svg" alt="icon" width="47" height="57" />
+                </div>
+                <span>Flatter</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/laravel.svg" alt="icon" width="53" height="55" />
+                </div>
+                <span>Laravel</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="4.8s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/bitrix.svg" alt="icon" width="57" height="57" />
+                </div>
+                <span>Битрикс24</span>
+              </div>
+            </div>
+          </li>
+          <!-- INSTRUMENTS LIST ITEM-->
+          <li class="instruments-list__item">
+            <div class="instruments-list__title">OMAP
+              <p>(Omnichannel Marketing Automation Platforms)</p>
+            </div>
+            <div class="instruments-list__logos">
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/go.svg" alt="icon" width="53" height="55" />
+                </div>
+                <span>Go</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.2s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/mongo.svg" alt="icon" width="25" height="55" />
+                </div>
+                <span>MongoDB</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.4s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/clickhouse.svg" alt="icon" width="64" height="55" />
+                </div>
+                <span>Clickhouse</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/airflow.svg" alt="icon" width="55" height="55" />
+                </div>
+                <span>Apache Airflow</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="5.8s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/kafka.svg" alt="icon" width="34" height="55" />
+                </div>
+                <span>Kafka</span>
+              </div>
+              <div class="instruments-list__logo wow animate__fadeInRight" data-wow-delay="6s">
+                <div class="instruments-list__img">
+                  <img src="./img/instruments/streams.svg" alt="icon" width="112" height="55" />
+                </div>
+                <span>Kafka Streams</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="instruments__btn-mob">
+          <button class="btn-send" data-modal-button="modal-call-form">Отправить заявку</button>
+        </div>
+      </div>
+    </section>
+    <!--INTERFACE-->
+    <section class="interface">
+      <div class="container">
+        <div class="interface__top">
+          <!-- INTERFACE TITLE-->
+          <div class="interface__title">
+            <h2 class="section-title">Интерфейс нашего продукта</h2>
+          </div>
+          <div class="interface__btns">
+            <div class="interface-slider-controls">
+              <button class="slider-prev" id="interface-slider-prev">
+                <svg class="svg-prev">
+                  <use href="./img/spriteSvg.svg#svg-prev"></use>
+                </svg>
+              </button>
+              <button class="slider-next" id="interface-slider-next">
+                <svg class="svg-next">
+                  <use href="./img/spriteSvg.svg#svg-next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- INTERFACE SLIDER-->
+        <div class="interface-slider">
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Клиентские профили</div>
+                <div class="interface-card__subtitle">Сбор, хранение и систематизация данных клиентов в единой платформе</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Сегментация</div>
+                <div class="interface-card__subtitle">Гибкая система фильтров по расширенным атрибутам контактов</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Триггерные сценарии</div>
+                <div class="interface-card__subtitle">Настройка сценариев коммуникации любого уровня сложности для омникальных маркетинговых кампаний</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Механики с купонами</div>
+                <div class="interface-card__subtitle">Выпуск уникальных и массовых промокодов с адаптивными условиями действия</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Рассылки</div>
+                <div class="interface-card__subtitle">Маркетинговые рассылки, собираемые через встроенный редактор шаблонов</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- INTERFACE SLIDE-->
+          <div class="interface-slide">
+            <div class="interface-card">
+              <div class="interface-card__top">
+                <div class="interface-card__title">Программа лояльности</div>
+                <div class="interface-card__subtitle">Настройка акционных правил программы лояльности со скидочными и бонусными механиками</div>
+              </div>
+              <div class="interface-card__img">
+                <img src="./img/interface/interface03.svg" alt="img" width="783" height="405" />
+              </div>
+              <a class="zoom-icon" href="./img/interface/interface03.svg" data-fancybox="gallery">
+                <svg class="svg-zoom">
+                  <use href="./img/spriteSvg.svg#svg-zoom"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- REVIEWS-->
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews-wrapper">
+          <!-- REVIEWS TITLE-->
+          <h2 class="section-title section-title--dark">Что говорят наши клиенты</h2>
+          <!-- REVIEWS SLIDER BTNS-->
+          <div class="reviews-slider-controls">
+            <button class="slider-prev" id="reviews-slider-prev">
+              <svg class="svg-prev">
+                <use href="./img/spriteSvg.svg#svg-prev"></use>
+              </svg>
+            </button>
+            <button class="slider-next" id="reviews-slider-next">
+              <svg class="svg-next">
+                <use href="./img/spriteSvg.svg#svg-next"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- REVIEWS SLIDER-->
+          <div class="reviews-slider">
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo01.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ХК "Сочи"</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Ценность программы лояльности для клуба заключается в получении информации о своих болельщиках и их потребностях для выстраивания эффективной маркетинговой деятельности.Внедрив решение Manzana Loyalty Sport, мы получили полный набор инструментов для интеллектуального маркетингового анализа клиентской базы. Например, мы используем RFM-анализ, сегментацию по дате последней покупки, соцдем-признакам и географии.Это дает нам возможность выстраивать эффективную систему массовых и целевых коммуникаций.</p>
+                    <p>Сегодня мы возлагаем большие надежды на систему управления программой лояльности как ключевую часть развития клуба.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo02.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ФК «Динамо»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>В «Динамо» во главу угла ставится не только достижение спортивных результатов, но и выстраивание эффективных бизнес-процессов, подразумевающих чёткую стратегию взаимодействия с окружающей средой: болельщиками, партнёрами и спонсорами. Для достижения высоких целей было важно привлечь компанию, обладающую передовой экспертизой в выстраивании комплексных решений в области больших данных. Именно поэтому - в 2019 году - выбор был сделан в пользу Manzana Sport.</p>
+                    <p>В числе неоспоримых конкурентных преимуществ Manzana необходимо выделить локальную техническую поддержку разработок, что критически важно в контексте защиты инвестиций, а также для ведения бесперебойной и планомерной работы по развитию бренда клуба в текущих реалиях.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo03.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ФК «Локомотив»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Вместе с Manzana Sport нам удалось внедрить современную программу лояльности «Состав», интегрированную с надёжной CRM-системой, запустить новый интернет-магазин и единый личный кабинет.</p>
+                    <p>Мы работаем с коллегами уже 3 год и можем отметить их высокую степень заинтересованности в совместном развитии продуктов.</p>
+                    <p>Специалисты Manzana Sport оперативно оказывают необходимую техническую поддержку, предлагают актуальные рекомендации по управлению программой лояльности и реализуют новую функциональность по нашим запросам.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo04.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ФК «Спартак»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Выбрать CRM-систему и партнера для ее запуска оказалось не такой простой задачей. Мы просмотрели несколько компаний и остановили свой выбор на Manzana Group. Нам показалось, что у специалистов Manzana Group достаточно опыта в сложных проектах, чтобы помочь нам решить наши задачи очень быстро и надежно. И по прошествии времени мы видим, что в своем выборе не ошиблись. Весь проект был реализован вовремя, и мы получили широкий инструментарий для работы с нашим фан-клубом и посетителями стадиона.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo05.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ФК «Зенит»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Выбрать CRM-систему и партнера для ее запуска оказалось не такой простой задачей. Мы просмотрели несколько компаний и остановили свой выбор на Manzana Group. Нам показалось, что у специалистов Manzana Group достаточно опыта в сложных проектах, чтобы помочь нам решить наши задачи очень быстро и надежно. И по прошествии времени мы видим, что в своем выборе не ошиблись. Весь проект был реализован вовремя, и мы получили широкий инструментарий для работы с нашим фан-клубом и посетителями стадиона.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo06.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ХК «Салават Юлаев»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Для того чтобы вывести уровень отношений с болельщиками на новый уровень, руководство хоккейного клуба «Салават Юлаев» в 2016 году приняло решение о запуске программы лояльности болельщиков на основе решения Manzana Loyalty Sport.</p>
+                    <p>Главной концепцией проекта стала цель - не ограничиваться предложением дисконтной программы «Карта Болельщика», а создать абсолютно новую информационную систему, в периметре которой болельщики будут взаимодействовать с билетной программой, магазинами атрибутики, точками общепита и интернет-магазином клуба.</p>
+                    <p>Особо требовательной аудиторией для любого клуба являются владельцы сезонных абонементов, верные болельщики, ожидающие взамен своей преданности, затратам времени и средств особое отношение со стороны клуба.</p>
+                    <p>Для них была разработана уникальная система поощрения посещаемости: самые верные болельщики, посещающие максимальное количество матчей всех категорий, получают от клуба наибольшую признательность. Данный подход лег в основу абонементной политики клуба на ближайшие сезоны.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- REVIEWS SLIDE-->
+            <div class="reviews-slide">
+              <div class="review-card">
+                <div class="review-card__img">
+                  <img src="./img/reviews/logo07.svg" alt="logo" width="36" height="87" />
+                </div>
+                <div class="review-card__title">ФК «Факел»</div>
+                <div class="review-card__text">
+                  <div class="scroll-wrapper">
+                    <p>Развитие отношений с болельщиками и повышение лояльной аудитории – наш абсолютный приоритет.</p>
+                    <p>Мы рады предложить факелонам качественные продукты, разработанные совместно с Manzana Sport. Благодаря коллегам у нас появились полноценная CRM-система, новая программа лояльности, интернет-магазин и личный кабинет болельщика. Всё реализовано на высшем уровне, качественно и в срок. Дальше – больше.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__img">
+            <img src="./img/intersect.svg" alt="logo" width="36" height="87" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- RUNNING LINE-->
+    <section class="running-line">
+      <!-- RUNNING LINE SLIDER-->
+      <div class="line-slider">
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+        <div class="line-slide">
+          <div class="line-text">Cпорт - часть большой семьи!</div>
+        </div>
+      </div>
+    </section>
+    <!-- PLATFORM-->
+    <section class="platfrom">
+      <div class="container">
+        <div class="platform-content">
+          <div class="platform__logo">
+            <img src="./img/platform/platform-logo.svg" alt="logo" width="523" height="129" />
+          </div>
+          <!-- PLATFORM TITLE-->
+          <div class="platform__title">
+            <h2 class="title">Интеллектуальная платформа лояльности</h2>
+          </div>
+          <h3 class="platform__subtitle">Помогаем строить персональные отношения с миллионами клиентов</h3>
+          <div class="platform__images">
+            <div class="platform__bg">
+              <img src="./img/platform/background.webp" srcset="./img/platform/background@2x.webp 2x" alt="background" width="906" height="563" />
+            </div>
+            <div class="platform__decor">
+              <img src="./img/platform/ellipse.svg" alt="decor" width="906" height="503" />
+            </div>
+          </div>
+          <div class="platform__img-mob">
+            <img src="./img/platform/platform-bg.webp" srcset="./img/platform/platform-bg@2x.webp 2x" alt="background" width="906" height="563" />
+          </div>
+          <div class="platform__btn">
+            <a class="btn-yellow" href="#!">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT-->
+    <section class="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact__img">
+            <img src="./img/contact/contact-bg.webp" srcset="./img/contact/contact-bg@2x.webp 2x" alt="background" width="1019" height="587" />
+          </div>
+          <!-- CONTACT TITLE-->
+          <div class="contact__title">
+            <h2 class="title">Начнем сотрудничество?</h2>
+          </div>
+          <!-- CONTACT FORM-->
+          <div class="contact-form-wrapper">
+            <form class="form contact-form">
+              <input type="hidden" name="form_name" value="Форма" />
+              <div class="form-item form-item-mb15">
+                <input class="form-input" type="text" name="name" placeholder="Имя" />
+              </div>
+              <div class="form-item form-item-mb15">
+                <input class="form-input" type="text" name="mail" placeholder="Email" />
+              </div>
+              <div class="form-item form-item-mb15">
+                <input class="form-input" type="text" name="tel" placeholder="Телефон" />
+              </div>
+              <div class="form-item form-item-mb15">
+                <textarea class="form-input form-input--textarea" name="message" placeholder="Расскажите о вашей задаче"></textarea>
+              </div>
+              <div class="form-item form-item-mb25">
+                <label class="checkbox">
+                  <input class="real-checkbox" type="checkbox" name="privacy" checked="checked" />
+                  <span class="custom-checkbox"></span>
+                  <a class="call-form-privacy" href="#!">Согласен с политикой обработки данных</a>
+                </label>
+              </div>
+              <div class="form-item form-item-btn">
+                <button class="submit-btn" type="submit">Отправить запрос</button>
+              </div>
+            </form>
+          </div>
+          <div class="contact__images-mob">
+            <div class="contact__decor-mob">
+              <img src="./img/contact/ellipse-contact.svg" alt="decor" width="577" height="577" />
+            </div>
+            <div class="contact__img-mob">
+              <img src="./img/contact/contact-bg-mob.webp" srcset="./img/contact/contact-bg-mob@2x.webp 2x" alt="background" width="335" height="354" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER-->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-top-wrapper">
+          <div class="footer__logo">
+            <img src="./img/logo-footer.svg" alt="manzana group" width="358" height="58" />
+          </div>
+          <div class="footer__menu">
+            <a href="index.html">Главная</a>
+            <a href="#!">Экспертиза</a>
+            <a href="#portfolio">Портфолио</a>
+          </div>
+        </div>
+        <div class="footer__copyright">© 2006–2025 Manzana Group</div>
+      </div>
+      <div class="footer-bottom">
+        <!-- CONTACTS-->
+        <ul class="footer__contacts">
+          <li>
+            <span>Телефон:</span>
+            <a class="footer__contacts-tel" href="tel:+78007750111">8(800)7750111</a>
+          </li>
+          <li>
+            <span>Почта:</span>
+            <a class="footer__contacts-mail" href="mailto:welcome@manzanagroup.ru">welcome@manzanagroup.ru</a>
+          </li>
+        </ul>
+        <div class="footer__block">
+          <div class="footer__img">
+            <img src="./img/footer-img.svg" alt="footer img" width="65" height="45" />
+          </div>
+          <a class="footer__agreement" href="#!">Пользовательское соглашение</a>
+        </div>
+      </div>
+      <div class="footer__copyright-mob">© 2006–2025 Manzana Group</div>
+    </div>
+  </div>
+  <script src="libs/jquery/jquery-3.7.0.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/fancybox/fancybox.umd.js"></script>
+  <script src="libs/wow/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
